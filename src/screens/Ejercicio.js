@@ -5,24 +5,31 @@ import creadorData from '../data/creador';
 import Boton from '../components/Boton';
 
 const Ejercicio = ({ navigation }) => {
-    const irPantalla1 = () => {
-        navigation.navigate('Pantalla1');
+    const irPantalla2 = () => {
+        navigation.navigate('Pantalla2');
     };
 
     return (
         <View style={styles.container}>
             <View style={styles.card}>
                 <View style={styles.textContainer}>
-                    <Text style={styles.title}>Perfil 3:</Text>
-                    <Text style={styles.title}>Indicaciones: </Text>
-                    <Text style={styles.description}>
-                    En parejas, se debe de realizar una investigación sobre como se implementa un menú de navegación en una aplicación móvil con React Native – Expo go.
-                    Para más información ver el documento que se encuentra en teams
-                    </Text>
+                    <Text style={styles.title}>Datos estudiantes</Text>
+                    <Text style={styles.title}>Nombres:</Text> 
+                    <Text style={styles.description}>Ricardo Nicolas Melara</Text>
+                    <Text style={styles.description}>Manuel Enrique Contreras</Text>
+                    <Text style={styles.title}>Carnet:</Text> 
+                    <Text style={styles.description}> Ricardo: 20220685</Text>
+                    <Text style={styles.description}> Manuel: 20220685</Text>
+                    <Text style={styles.title}>Imagen:</Text> 
+                    <Text style={styles.description}>Ricardo</Text>
+                    <Image style={styles.image} source={require('../img/ricardo.jpg')}/>
+                    <Text style={styles.description}>Manuel</Text>                    
+                    <Image style={styles.image} source={require('../img/manuel.jpeg')}/>
+
                 </View>
                 <Boton
 textoBoton='Regresar a Inicio'
-accionBoton={irPantalla1}
+accionBoton={irPantalla2}
 />
             </View>
         </View>
@@ -38,6 +45,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: StatusBar.currentHeight || 0,
+    },
+    image: {
+        width: 100,
+        height: 100,
+        marginBottom: 10,
     },
     lista: {
         fontSize: 16,
